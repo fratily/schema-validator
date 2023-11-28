@@ -31,6 +31,11 @@ class Schema
         return new S_Literal(null);
     }
 
+    public static function literal(bool|int|float|string|null $value): S_Literal
+    {
+        return new S_Literal($value);
+    }
+
     public static function bool(): S_Bool
     {
         return new S_Bool();
